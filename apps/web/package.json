@@ -1,0 +1,42 @@
+{
+  "name": "web",
+  "version": "0.1.0",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "dev": "next dev --port 3000",
+    "build": "cross-env NODE_OPTIONS=--max-old-space-size=8000 next build",
+    "start": "next start",
+    "check:format": "prettier --check \"**/*.{ts,tsx,js}\"",
+    "lint": "cross-env NODE_OPTIONS=--max-old-space-size=8000 next lint",
+    "check:types": "cross-env NODE_OPTIONS=--max-old-space-size=8000 tsc --noEmit",
+    "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf .next"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.1",
+    "@hookform/resolvers": "^5.2.2",
+    "@mui/icons-material": "^7.3.5",
+    "@mui/material": "^7.3.6",
+    "@repo/ui": "workspace:*",
+    "@tanstack/react-query": "^5.90.12",
+    "next": "16.0.10",
+    "peerjs": "^1.5.5",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "react-hook-form": "^7.68.0",
+    "styled-components": "^6.1.19",
+    "uuid": "^13.0.0",
+    "zod": "^4.2.1"
+  },
+  "devDependencies": {
+    "@repo/eslint-config": "workspace:*",
+    "@repo/typescript-config": "workspace:*",
+    "@types/node": "^22.15.3",
+    "@types/react": "19.2.2",
+    "@types/react-dom": "19.2.2",
+    "@types/uuid": "^11.0.0",
+    "eslint": "^8.57.0",
+    "typescript": "5.9.2"
+  }
+}
