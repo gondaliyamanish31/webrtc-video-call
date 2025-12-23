@@ -1,0 +1,11 @@
+# Editor
+.idea
+.vscode
+
+# Node modules
+node_modules
+
+# Lock files
+pnpm-lock.yaml
+buildspec.yml
+.github/
