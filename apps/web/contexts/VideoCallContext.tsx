@@ -56,7 +56,7 @@ type VideoCallContextType = {
   endCall: () => void;
 };
 
-const VideoCallContext5 = createContext<VideoCallContextType | undefined>(
+const VideoCallContext = createContext<VideoCallContextType | undefined>(
   undefined
 );
 
@@ -603,7 +603,7 @@ export const VideoCallProvider = ({ children }: VideoCallProviderProps) => {
   }, [localStream, screenStream, roomId]);
 
   return (
-    <VideoCallContext5.Provider
+    <VideoCallContext.Provider
       value={{
         localStream,
         remoteStream: null,
@@ -634,12 +634,12 @@ export const VideoCallProvider = ({ children }: VideoCallProviderProps) => {
       }}
     >
       {children}
-    </VideoCallContext5.Provider>
+    </VideoCallContext.Provider>
   );
 };
 
 export const useVideoCall = () => {
-  const context = useContext(VideoCallContext5);
+  const context = useContext(VideoCallContext);
   if (!context) {
     throw new Error("useVideoCall must be used within VideoCallProvider");
   }

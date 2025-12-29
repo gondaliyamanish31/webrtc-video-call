@@ -4,7 +4,7 @@ import { VideoCallProvider } from "@/contexts/VideoCallContext";
 import { SessionLoader } from "@/provider/SessionLoader";
 import { ThemeProvider, createTheme, CssBaseline } from "@mui/material";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { SessionContext, SessionProvider } from "next-auth/react";
+import { SessionProvider } from "next-auth/react";
 import { useState, useEffect } from "react";
 
 const theme = createTheme({
