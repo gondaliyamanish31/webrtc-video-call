@@ -300,7 +300,7 @@ http://localhost:3000
 
 ### Change Video Quality
 
-Edit `apps/web/src/contexts/VideoCallContext4.tsx`:
+Edit `apps/web/src/contexts/VideoCallContext.tsx`:
 
 ```typescript
 const stream = await navigator.mediaDevices.getUserMedia({
@@ -322,7 +322,7 @@ const MAX_USERS = 10; // Change to desired maximum
 
 ### Add TURN Server
 
-Edit `apps/web/src/contexts/VideoCallContext4.tsx`:
+Edit `apps/web/src/contexts/VideoCallContext.tsx`:
 
 ```typescript
 const STUN_SERVERS = {
@@ -397,7 +397,7 @@ const STUN_SERVERS = {
 ```sh
 # Ensure latest code
 - Verify socket.ts has fingerprint support
-- Verify VideoCallContext4.tsx is updated
+- Verify VideoCallContext.tsx is updated
 - Clear localStorage: localStorage.clear() in console
 
 # If issue persists
@@ -461,8 +461,8 @@ pnpm turbo clean
 ## Key Files
 
 - `apps/web/src/pages/api/socket.ts` - Socket.IO server and signaling logic
-- `apps/web/src/contexts/VideoCallContext4.tsx` - WebRTC logic and state management
-- `apps/web/src/components/VideoCallPage/VideoCallPage4.tsx` - Main video call UI
+- `apps/web/src/contexts/VideoCallContext.tsx` - WebRTC logic and state management
+- `apps/web/src/components/VideoCallPage/VideoCallPage.tsx` - Main video call UI
 - `apps/web/src/components/Chat/ChatPanel.tsx` - Resizable chat interface
 - `apps/web/src/components/Video/VideoControls.tsx` - Audio/video control buttons
 - `turbo.json` - Turborepo configuration
